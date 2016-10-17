@@ -1,0 +1,59 @@
+[user]
+    name         = Nariman Safiulin
+    email 	     = woofilee@gmail.com
+    signingkey   = 69547498A752BBED
+
+[core]
+    quotepath    = false
+    excludesfile = ~/.gitignore_global
+
+[commit]
+    gpgsign      = true
+
+[push]
+    default      = current
+
+[merge]
+    ff           = false
+
+[color]
+    ui           = auto
+
+[url "git@github.com:"]
+    insteadOf    = gh:
+
+[url "https://github.com/"]
+    insteadOf    = ghw:
+
+[url "git@bitbucket.org:"]
+    insteadOf    = bb:
+
+[url "https://bitbucket.org/"]
+    insteadOf    = bbw:
+
+[alias]
+    a 	         = add
+
+    b 	         = branch
+    bm 	         = branch -m
+
+    co 	         = checkout
+    cob          = checkout -b
+
+    c 	         = commit -v
+    cm 	         = commit -m
+
+    d            = diff
+
+    la           = "!git config --global --get-regexp alias"
+
+    # Short graph (relative date)
+    l 	         = log --graph --abbrev-commit --decorate --all --pretty=format:'%C(bold red)%h%C(reset) - %s %C(green)(%cr)%C(reset) %C(blue)<%an>%C(reset)%C(yellow)%d%C(reset)'
+    # Short two-line graph (both relative and absolute date)
+    ll 	         = log --graph --abbrev-commit --decorate --all --pretty=format:'%C(bold red)%h%C(reset) - %C(cyan)%aD%C(reset) %C(green)(%cr)%C(reset)%C(yellow)%d%C(reset)%n          %s %C(blue)<%an>%C(reset)'
+    # Short graph with GPG signature status (relative date)
+    lg 	         = log --graph --abbrev-commit --decorate --all --pretty=format:'%C(bold red)%h%C(reset) %C(bold magenta)%G?%C(reset) - %s %C(green)(%cr)%C(reset) %C(blue)<%an>%C(reset)%C(yellow)%d%C(reset)'
+    # Short two-line graph with GPG signature status (both relative and absolute date)
+    llg	         = log --graph --abbrev-commit --decorate --all --pretty=format:'%C(bold red)%h%C(reset) %C(bold magenta)%G?%C(reset) - %C(cyan)%aD%C(reset) %C(green)(%cr)%C(reset)%C(yellow)%d%C(reset)%n            %s %C(blue)<%an>%C(reset)'
+
+    s            = status
