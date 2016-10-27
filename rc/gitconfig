@@ -45,15 +45,15 @@
 
     d            = diff
 
-    la           = "!git config --global --get-regexp alias"
+    lac          = "!git config --global --get-regexp alias"
 
     # Short graph (relative date)
-    l 	         = log --graph --abbrev-commit --decorate --all --pretty=format:'%C(bold red)%h%C(reset) - %s %C(green)(%cr)%C(reset) %C(blue)<%an>%C(reset)%C(yellow)%d%C(reset)'
+    l            = log --graph --abbrev-commit --decorate --pretty=format:'%C(bold red)%h%C(reset) - %s %C(green)(%cr)%C(reset) %C(blue)<%an>%C(reset)%C(yellow)%d%C(reset)'
+    # Short all branches graph (relative date)
+    la 	         = "!git l --all"
     # Short two-line graph (both relative and absolute date)
-    ll 	         = log --graph --abbrev-commit --decorate --all --pretty=format:'%C(bold red)%h%C(reset) - %C(cyan)%aD%C(reset) %C(green)(%cr)%C(reset)%C(yellow)%d%C(reset)%n          %s %C(blue)<%an>%C(reset)'
-    # Short graph with GPG signature status (relative date)
-    lg 	         = log --graph --abbrev-commit --decorate --all --pretty=format:'%C(bold red)%h%C(reset) %C(bold magenta)%G?%C(reset) - %s %C(green)(%cr)%C(reset) %C(blue)<%an>%C(reset)%C(yellow)%d%C(reset)'
-    # Short two-line graph with GPG signature status (both relative and absolute date)
-    llg	         = log --graph --abbrev-commit --decorate --all --pretty=format:'%C(bold red)%h%C(reset) %C(bold magenta)%G?%C(reset) - %C(cyan)%aD%C(reset) %C(green)(%cr)%C(reset)%C(yellow)%d%C(reset)%n            %s %C(blue)<%an>%C(reset)'
+    ll 	         = log --graph --abbrev-commit --decorate --pretty=format:'%C(bold red)%h%C(reset) - %C(cyan)%aD%C(reset) %C(green)(%cr)%C(reset)%C(yellow)%d%C(reset)%n          %s %C(blue)<%an>%C(reset)'
+    # Short all branches two-line graph (both relative and absolute date)
+    lla 	     = "!git ll --all"
 
     s            = status
