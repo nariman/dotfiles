@@ -16,6 +16,9 @@
 [merge]
     ff           = false
 
+[pull]
+    ff           = true
+
 [color]
     ui           = auto
 
@@ -54,6 +57,6 @@
     # Short two-line graph (both relative and absolute date)
     ll 	         = log --graph --abbrev-commit --decorate --pretty=format:'%C(bold red)%h%C(reset) - %C(cyan)%aD%C(reset) %C(green)(%cr)%C(reset)%C(yellow)%d%C(reset)%n          %s %C(blue)<%an>%C(reset)'
     # Short all branches two-line graph (both relative and absolute date)
-    lla 	     = "!git ll --all"
+    lla          = "!git ll --all"
 
     s            = status
