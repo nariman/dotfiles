@@ -4,29 +4,27 @@
     signingkey   = 69547498A752BBED
 
 [core]
-    quotepath    = false
     excludesfile = ~/.gitignore_global
 
 [commit]
+    # Always try to sign commits
+    # Use --no-gpg-sign for unsigned commit
     gpgsign      = true
 
 [push]
     default      = current
-
-[merge]
-    ff           = false
-
-[pull]
-    ff           = true
-
-[color]
-    ui           = auto
 
 [url "git@github.com:"]
     insteadOf    = gh:
 
 [url "https://github.com/"]
     insteadOf    = ghw:
+
+[url "git@gitlab.com:"]
+    insteadOf    = gl:
+
+[url "https://gitlab.com/"]
+    insteadOf    = glw:
 
 [url "git@bitbucket.org:"]
     insteadOf    = bb:
@@ -35,27 +33,28 @@
     insteadOf    = bbw:
 
 [alias]
-    a 	         = add
+    # List all aliases
+    lac          = "!git config --global --get-regexp alias"
 
-    b 	         = branch
-    bm 	         = branch -m
+    a            = add
 
-    co 	         = checkout
+    b            = branch
+    bm           = branch -m
+
+    co           = checkout
     cob          = checkout -b
 
-    c 	         = commit -v
-    cm 	         = commit -m
+    c            = commit -v
+    cm           = commit -m
 
     d            = diff
-
-    lac          = "!git config --global --get-regexp alias"
 
     # Short graph (relative date)
     l            = log --graph --abbrev-commit --decorate --pretty=format:'%C(bold red)%h%C(reset) - %s %C(green)(%cr)%C(reset) %C(blue)<%an>%C(reset)%C(yellow)%d%C(reset)'
     # Short all branches graph (relative date)
-    la 	         = "!git l --all"
+    la           = "!git l --all"
     # Short two-line graph (both relative and absolute date)
-    ll 	         = log --graph --abbrev-commit --decorate --pretty=format:'%C(bold red)%h%C(reset) - %C(cyan)%aD%C(reset) %C(green)(%cr)%C(reset)%C(yellow)%d%C(reset)%n          %s %C(blue)<%an>%C(reset)'
+    ll           = log --graph --abbrev-commit --decorate --pretty=format:'%C(bold red)%h%C(reset) - %C(cyan)%aD%C(reset) %C(green)(%cr)%C(reset)%C(yellow)%d%C(reset)%n          %s %C(blue)<%an>%C(reset)'
     # Short all branches two-line graph (both relative and absolute date)
     lla          = "!git ll --all"
 
