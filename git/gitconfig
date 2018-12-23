@@ -36,13 +36,21 @@
     # List all aliases
     lac          = "!git config --global --get-regexp alias"
 
+    # Dangerous actions requires minimum 2 symbols
+    # Dangerous is irreversible or hard to reverse
+
+    # Sort by command, not alias
+    # Split by command
+
     a            = add
+    au           = add -u
 
     b            = branch
-    bm           = branch -m
 
     co           = checkout
     cob          = checkout -b
+
+    cp           = cherry-pick
 
     c            = commit -v
     cm           = commit -m
@@ -57,5 +65,11 @@
     ll           = log --graph --abbrev-commit --decorate --pretty=format:'%C(bold red)%h%C(reset) - %C(cyan)%aD%C(reset) %C(green)(%cr)%C(reset)%C(yellow)%d%C(reset)%n          %s %C(blue)<%an>%C(reset)'
     # Short all branches two-line graph (both relative and absolute date)
     lla          = "!git ll --all"
+
+    me           = merge
+
+    re           = rebase
+
+    rr           = reset
 
     s            = status

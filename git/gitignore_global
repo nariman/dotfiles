@@ -1,34 +1,58 @@
-.idea/
-.vscode/
-*.pyc
-*.sec
-*~
-*.swp
+# List of templates from gitignore.io
+# This content should be replaced by the following templates
 
-.DS_Store
-.DS_Store?
-._*
-.Spotlight-V100
-.Trashes
-ehthumbs.db
-Thumbs.db
+# Command to execute (WILL OVERWRITE THE FILE!):
+# cat ~/.gitignore_global | grep -o '^[^#]*' | paste -d, | curl -L -s https://www.gitignore.io/api/$(cat -) > ~/.gitignore_global
 
-*.log
-*.sql
-*.sqlite
+# OS
+linux
+macos
+windows
 
-*.7z
-*.dmg
-*.gz
-*.iso
-*.jar
-*.rar
-*.tar
-*.zip
+# Editors
+androidstudio
+intellij
+phpstorm
+pycharm
+sublimetext
+vim
+visualstudiocode
+webstorm
 
-*.com
-*.class
-*.dll
-*.exe
-*.o
-*.so
+# Languages / Platforms
+android
+c
+c++
+clojure
+cuda
+elixir
+erlang
+go
+java
+kotlin
+node
+python
+r
+ruby
+scala
+
+# Frameworks
+angular
+django
+flask
+laravel
+rails
+
+# Language tools
+virtualenv
+
+# Tools
+database
+
+# Other
+
+archive
+archives
+compressed
+compressedarchive
+compression
