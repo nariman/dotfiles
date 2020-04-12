@@ -12,24 +12,40 @@
     gpgsign      = true
 
 [push]
+    # It's a nightmare to set upstream every time I create a new branch, so push
+    # to the same branch by default
+    # There are only a few cases when remote's branch name is different from the
+    # local one, so we can handle them manually
     default      = current
 
 [url "git@github.com:"]
+    # Use "gh:nariman/dotfiles.git"
+    # Instead of "git@github.com:nariman/dotfiles.git"
     insteadOf    = gh:
 
 [url "https://github.com/"]
+    # Use "ghw:nariman/dotfiles.git"
+    # Instead of "https://github.com/nariman/dotfiles.git"
     insteadOf    = ghw:
 
 [url "git@gitlab.com:"]
+    # Use "gl:woofilee/dotfiles.git"
+    # Instead of "git@gitlab.com:woofilee/dotfiles.git"
     insteadOf    = gl:
 
 [url "https://gitlab.com/"]
+    # Use "glw:woofilee/dotfiles.git"
+    # Instead of "https://gitlab.com/woofilee/dotfiles.git"
     insteadOf    = glw:
 
 [url "git@bitbucket.org:"]
+    # Use "bb:woofilee/dotfiles.git"
+    # Instead of "git@bitbucket.org:woofilee/dotfiles.git"
     insteadOf    = bb:
 
 [url "https://bitbucket.org/"]
+    # Use "bbw:woofilee/dotfiles.git"
+    # Instead of "https://woofilee@bitbucket.org/woofilee/dotfiles.git"
     insteadOf    = bbw:
 
 [alias]
@@ -59,10 +75,10 @@
 
     # Short graph (relative date)
     l            = log --graph --abbrev-commit --decorate --pretty=format:'%C(bold red)%h%C(reset) - %s %C(green)(%cr)%C(reset) %C(blue)<%an>%C(reset)%C(yellow)%d%C(reset)'
-    # Short all branches graph (relative date)
-    la           = "!git l --all"
     # Short two-line graph (both relative and absolute date)
     ll           = log --graph --abbrev-commit --decorate --pretty=format:'%C(bold red)%h%C(reset) - %C(cyan)%aD%C(reset) %C(green)(%cr)%C(reset)%C(yellow)%d%C(reset)%n          %s %C(blue)<%an>%C(reset)'
+    # Short all branches graph (relative date)
+    la           = "!git l --all"
     # Short all branches two-line graph (both relative and absolute date)
     lla          = "!git ll --all"
 
