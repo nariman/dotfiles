@@ -5,6 +5,7 @@
 
 [core]
     excludesfile = ~/.gitignore_global
+    quotePath    = false
 
 [commit]
     # Always try to sign commits
@@ -70,6 +71,7 @@
 
     c            = commit -v
     cm           = commit -m
+    ca           = commit --amend
 
     d            = diff
 
