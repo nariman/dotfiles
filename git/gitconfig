@@ -12,6 +12,9 @@
     # Use --no-gpg-sign for unsigned commit
     gpgsign      = true
 
+[pull]
+    ff = only
+
 [push]
     # It's a nightmare to set upstream every time I create a new branch, so push
     # to the same branch by default
